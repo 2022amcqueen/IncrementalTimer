@@ -39,12 +39,8 @@ setInterval(function(){
             sec++
         }
         
+        
         var time = (hr + " : " + min + " : " + sec)
-        if(hr < 9 && min < 9 && sec < 9){
-            time = ("0" + hr + " : "+ "0" + min + " : " + "0" + sec)
-        }else if(hr > 9){
-            time = "9 hour limit exceeded"
-        }
         
         element.innerHTML = time
         save(time)
