@@ -2,10 +2,13 @@
 var hr = 0
 var min = 0
 var sec = 0
-var element = document.getElementById("Time")
 var pause = false
+var element = document.getElementById("Time")
+var localStorage = window.localStorage
 
-//Global Functions
+//* Global Functions
+
+//Change Timer State 
 function timerState(){
     if(pause == false){
         pause = true
@@ -14,6 +17,7 @@ function timerState(){
     }
 }
 
+//Reset Timer
 function reset(){
     hr = 0
     min = 0
@@ -22,8 +26,7 @@ function reset(){
     element.innerHTML = hr + " : " + min + " : " + sec
 }
 
-
-//Loop Function
+//Add Time Function
 setInterval(function(){
     if(pause == false){
         if(min >= 59){
@@ -36,7 +39,15 @@ setInterval(function(){
             sec++
         }
         
-        element.innerHTML = hr + " : " + min + " : " + sec
+        var time = (hr + " : " + min + " : " + sec)
+        if(hr < 9 && min < 9 && sec < 9){
+            time = ("0" + hr + " : "+ "0" + min + " : " + "0" + sec)
+        }else if(hr > 9){
+            time = "9 hour limit exceeded"
+        }
+        
+        element.innerHTML = time
+        save(time)
         
     }
 }, 1000)
