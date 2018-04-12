@@ -4,6 +4,7 @@ var min = 0
 var sec = 0
 var pause = false
 var element = document.getElementById("Time")
+var pauseElement = document.getElementById("timerState_b1")
 var localStorage = window.localStorage
 
 //* Global Functions
@@ -12,7 +13,9 @@ var localStorage = window.localStorage
 function timerState(){
     if(pause == false){
         pause = true
+        pauseElement.value = "Unpause"
     }else if(pause == true){
+        pauseElement.value = "Pause"
         pause = false
     }
 }
@@ -39,11 +42,10 @@ setInterval(function(){
             sec++
         }
         
-        
         var time = (hr + " : " + min + " : " + sec)
         
         element.innerHTML = time
-        save(time)
+        //save(time)
         
     }
 }, 1000)
