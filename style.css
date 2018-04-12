@@ -16,7 +16,7 @@
 }
 
 .timerReset_b:hover{
-    background-color: rgb(200, 0, 0);
+    background-color: rgb(250, 0, 0);
     color: rgb(0, 0, 0)
 }
 
@@ -30,8 +30,8 @@
 
 .Github{
     position: absolute;
-    left: 0px;
-    bottom: 15px;
+    right: 0px;
+    bottom: 0px;
     height: 37.5px;
 }
 
