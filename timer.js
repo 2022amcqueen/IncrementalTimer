@@ -42,10 +42,13 @@ setInterval(function(){
             sec++
         }
         
+        //min = (min + 1) % 60
+        //sec = (sec + 1) % 60
+        //hr = (hr + 1) % 60
+        
         var time = (hr + " : " + min + " : " + sec)
         
         element.innerHTML = time
-        //save(time)
         
     }
 }, 1000)
