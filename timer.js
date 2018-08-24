@@ -33,9 +33,9 @@ function reset(){
 setInterval(function(){
     if(pause == false){
         
-        min = (min + (1/60)) % 60)
-        sec = (sec + 1) % 60)
-        hr = (hr + (1/600)) % 60
+        min = ((min + (1/60)) % 60)
+        sec = ((sec + 1) % 60)
+        hr = ((hr + (1/600)) % 60)
         
         
         var time = (hr + " : " + min + " : " + sec)
