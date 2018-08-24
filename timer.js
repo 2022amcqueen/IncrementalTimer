@@ -26,7 +26,7 @@ function reset(){
     min = 0
     sec = 0
     
-    element.innerHTML = hr + " : " + min + " : " + sec
+    element.innerHTML = Math.floor(hr) + " : " + Math.floor(min) + " : " + sec
 }
 
 //Add Time Function
