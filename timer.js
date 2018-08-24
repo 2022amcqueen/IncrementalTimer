@@ -32,22 +32,10 @@ function reset(){
 //Add Time Function
 setInterval(function(){
     if(pause == false){
-        /*
-        if(min >= 59){
-            hr++
-            min = 0
-        }else if(sec >= 59){
-            min++
-            sec = 0
-        }else if(sec < 60){
-            sec++
-        }
         
-        */
-        
-        min = Math.floor((min + (1/60)) % 60)
-        sec = Math.floor((sec + 1) % 60)
-        hr = Math.floor((hr + (1/600)) % 60)
+        min = (min + (1/60)) % 60)
+        sec = (sec + 1) % 60)
+        hr = (hr + (1/600)) % 60
         
         
         var time = (hr + " : " + min + " : " + sec)
