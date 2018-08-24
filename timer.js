@@ -20,13 +20,23 @@ function timerState(){
     }
 }
 
+//Format Text (x to 0x)
+
+function format(str){
+    if(str <= 9){
+        return "0" + str
+    } else {
+        return str   
+    }
+}
+
 //Reset Timer
 function reset(){
     hr = 0
     min = 0
     sec = 0
     
-    element.innerHTML = hr + " : " + min + " : " + sec
+    element.innerHTML = format(hr) + " : " + format(min) + " : " + format(sec)
 }
 
 //Add Time Function
