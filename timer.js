@@ -21,13 +21,18 @@ function timerState(){
     }
     */
     pause = !pause
-    pauseElement.value = (pause && "Unpause") || "Pause"
+    if(pause){
+        pauseElement.value = "Unpause"
+    } else {
+        pauseElement.value = "Pause"
+    }
+    //pauseElement.value = (pause && "Unpause") || "Pause"
 }
 
 //Format Text (x to 0x)
 function format(str){
     if(str <= 9){
-        return "0" + str
+        return `0${str}`
     } else {
         return str   
     }
@@ -39,7 +44,7 @@ function reset(){
     min = 0
     sec = 0
     
-    element.innerHTML = (hr + " : " + min + " : " + sec)
+    element.innerHTML = `${format(hr)} : ${format(min)} : ${format(sec)}`//(hr + " : " + min + " : " + sec)
 }
 
 //Add Time Function
@@ -51,7 +56,8 @@ setInterval(function(){
         hr = ((hr + (1/600)) % 60)
         
         
-        var time = (format(Math.floor(hr)) + " : " + format(Math.floor(min)) + " : " + format(sec))
+        var time = `${format(Math.floor(hr))} : ${format(Math.floor(min))} : ${format(Math.floor(min))}` 
+        // (format(Math.floor(hr)) + " : " + format(Math.floor(min)) + " : " + format(sec))
         
         element.innerHTML = time
         
