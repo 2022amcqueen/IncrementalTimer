@@ -11,6 +11,7 @@ var localStorage = window.localStorage
 
 //Change Timer State 
 function timerState(){
+    /*
     if(pause == false){
         pause = true
         pauseElement.value = "Unpause"
@@ -18,10 +19,12 @@ function timerState(){
         pauseElement.value = "Pause"
         pause = false
     }
+    */
+    pause = !pause
+    pauseElement.value = (pause && "Unpause") || "Pause"
 }
 
 //Format Text (x to 0x)
-
 function format(str){
     if(str <= 9){
         return "0" + str
@@ -41,7 +44,7 @@ function reset(){
 
 //Add Time Function
 setInterval(function(){
-    if(pause == false){
+    if(!pause){
         
         min = ((min + (1/60)) % 60)
         sec = ((sec + 1) % 60)
