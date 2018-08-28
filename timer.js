@@ -4,8 +4,7 @@ var min = 0
 var sec = 0
 var pause = false
 var element = document.getElementById("Time")
-var pauseElement = document.getElementById("timerState_b1")
-var localStorage = window.localStorage
+var pauseElement = document.getElementById("timerState_b")
 
 //* Global Functions
 
@@ -15,13 +14,12 @@ function timerState(){
         pause = true
         pauseElement.value = "Unpause"
     }else if(pause == true){
-        pauseElement.value = "Pause"
         pause = false
+        pauseElement.value = "Pause"
     }
 }
 
 //Format Text (x to 0x)
-
 function format(str){
     if(str <= 9){
         return "0" + str
@@ -36,7 +34,7 @@ function reset(){
     min = 0
     sec = 0
     
-    element.innerHTML = (hr + " : " + min + " : " + sec)
+    element.innerHTML = (format(hr) + " : " + format(min) + " : " + format(sec))
 }
 
 //Add Time Function
