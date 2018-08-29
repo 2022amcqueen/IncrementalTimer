@@ -10,13 +10,17 @@ var pauseElement = document.getElementById("timerState_b")
 
 //Change Timer State 
 function timerState(){
+    /*
     if(pause == false){
         pause = true
         pauseElement.value = "Unpause"
     }else if(pause == true){
         pause = false
         pauseElement.value = "Pause"
-    }
+    }*/
+    
+    pause = !pause
+    pauseElement.value = pause ? "Pause" : "Unpause"
 }
 
 //Format Text (x to 0x)
