@@ -38,7 +38,7 @@ function reset(){
 
 //Add Time Function
 setInterval(function(){
-    if(pause == false){
+    if(!pause){
         
         min = ((min + (1/60)) % 60)
         sec = ((sec + 1) % 60)
