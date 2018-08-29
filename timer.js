@@ -16,15 +16,15 @@ function timerState(){
 
 //Format Text (x to 0x)
 function format(str){
-    /*
+    
     if(str <= 9){
         return "0" + str
     } else {
         return str   
     }
-    */
     
-    return ((str <= 9) ? ("0" + str)) : str
+    
+    //return ((str <= 9) ? ("0" + str)) : str
 }
 
 //Reset Timer
