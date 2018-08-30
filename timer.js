@@ -50,4 +50,4 @@ setInterval(function(){
         element.innerHTML = time
         
     }
-}, 1000)
+}, 10)
