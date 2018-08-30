@@ -40,9 +40,9 @@ function reset(){
 setInterval(function(){
     if(!pause){
         
-        min = ((min + (1/60)) % 59)
-        sec = ((sec + 1) % 59)
-        hr = ((hr + (1/6000)) % 59)
+        min = ((min + (1/60)) % 60)
+        sec = ((sec + 1) % 60)
+        hr = ((hr + (1/3600)) % 60)
         
         
         var time = (format(Math.floor(hr)) + " : " + format(Math.floor(min)) + " : " + format(sec))
@@ -50,4 +50,4 @@ setInterval(function(){
         element.innerHTML = time
         
     }
-}, 10)
+}, 1000)
