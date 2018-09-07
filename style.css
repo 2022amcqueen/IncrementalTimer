@@ -1,12 +1,11 @@
 .timerState_b{
     border-radius: 2px;
     border: none;
-    transition-duration: 1s
+    transition-duration: 1s;
 }
 
 .timerState_b:hover{
     background-color: rgb(56,188,254);
-    <!-- color: rgb(255, 255, 255) -->
 }
 
 .timerReset_b{
@@ -17,7 +16,7 @@
 
 .timerReset_b:hover{
     background-color: rgb(250, 0, 0);
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
 }
 
 
@@ -37,7 +36,7 @@
 
 
 #txtCred{
-    color: rgb(150, 150, 150)
+    color: rgb(150, 150, 150);
 }
 
 #Time{
@@ -46,16 +45,10 @@
     border-radius: 10px;
 }
 
-#gitBox{
-    
-}
-
-
-
 body{
-    background-color: rgb(28, 28, 28)
+    background-color: rgb(28, 28, 28);
 }
 
 h1{
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
 }
