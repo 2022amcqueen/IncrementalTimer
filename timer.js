@@ -42,4 +42,4 @@ setInterval(function(){
         element.innerHTML = time
         
     }
-}, 100)
+}, 1000)
